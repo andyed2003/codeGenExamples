@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Shared_Object"/>
+<org.eventb.core.seesContext name="3" org.eventb.core.target="HC_CONTEXT"/>
+<org.eventb.core.variable name="'" org.eventb.core.generated="true" org.eventb.core.identifier="ctm"/>
+<org.eventb.core.variable name="(" org.eventb.core.generated="true" org.eventb.core.identifier="shss"/>
+<org.eventb.core.variable name=")" org.eventb.core.generated="true" org.eventb.core.identifier="cttm"/>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Get_Target_Temperature1">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Get_Target_Temperature1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Set_Target_Temperature">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Set_Target_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Get_Target_Temperature2">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Get_Target_Temperature2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Set_Heat_Source_State">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Set_Heat_Source_State"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Get_Stored_HeatSource">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Get_Stored_HeatSource"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

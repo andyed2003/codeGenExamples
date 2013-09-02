@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Envir1"/>
+<org.eventb.core.seesContext name="_91TZAQx3EeG-k7RMHj65Mg" org.eventb.core.target="HC_CONTEXT"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="inc_flag"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="dec_flag"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="ts1"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="ts2"/>
+<org.eventb.core.variable name="'" org.eventb.core.identifier="hss"/>
+<org.eventb.core.variable name="_wJp3IEqBEeCcI88ZA94Fjg" org.eventb.core.identifier="anha"/>
+<org.eventb.core.variable name="_wJp3IUqBEeCcI88ZA94Fjg" org.eventb.core.identifier="ttd"/>
+<org.eventb.core.variable name="_wJp3IkqBEeCcI88ZA94Fjg" org.eventb.core.identifier="hsa"/>
+<org.eventb.core.variable name="_wJp3I0qBEeCcI88ZA94Fjg" org.eventb.core.identifier="ctd"/>
+<org.eventb.core.variable name="_wJp3JEqBEeCcI88ZA94Fjg" org.eventb.core.identifier="aota"/>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjh" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fji" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PressIncrease_Target_Temperature">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PressIncrease_Target_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjj" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Sense_PressIncrease_Target_Temperature">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Sense_PressIncrease_Target_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjk" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Reset_Increase_Flag">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Reset_Increase_Flag"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjl" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PressDecrease_Target_Temperature">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PressDecrease_Target_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjm" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Sense_PressDecrease_Target_Temperature">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Sense_PressDecrease_Target_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjn" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Reset_decrease_Flag">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Reset_decrease_Flag"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjo" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Display_Target_Temperature">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Display_Target_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjp" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Alter_Temperature_Sensor1">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Alter_Temperature_Sensor1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjq" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Alter_Temperature_Sensor2">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Alter_Temperature_Sensor2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjr" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Sense_Temperatures">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Sense_Temperatures"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjs" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Display_Current_Temperature">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Display_Current_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjt" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Actuate_Heat_Source">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Actuate_Heat_Source"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fju" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Actuate_OverHeat_Alram">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Actuate_OverHeat_Alram"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjv" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Sense_Heater_Status">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Sense_Heater_Status"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Actuate_NoHeat_Alarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Actuate_NoHeat_Alarm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_wJp3JEqBEeCcI88ZA94Fjx" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Alter_Heater_Status">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Alter_Heater_Status"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

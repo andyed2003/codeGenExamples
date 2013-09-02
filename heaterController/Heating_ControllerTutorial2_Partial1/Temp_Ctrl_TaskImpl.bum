@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Temp_Ctrl_Task"/>
+<org.eventb.core.seesContext name="@" org.eventb.core.target="HC_CONTEXT"/>
+<org.eventb.core.variable name="'" org.eventb.core.generated="true" org.eventb.core.identifier="avt"/>
+<org.eventb.core.variable name="(" org.eventb.core.generated="true" org.eventb.core.identifier="cttm2"/>
+<org.eventb.core.variable name=")" org.eventb.core.generated="true" org.eventb.core.identifier="hsc"/>
+<org.eventb.core.variable name="*" org.eventb.core.generated="true" org.eventb.core.identifier="ota"/>
+<org.eventb.core.variable name="+" org.eventb.core.generated="true" org.eventb.core.identifier="stm1"/>
+<org.eventb.core.variable name="," org.eventb.core.generated="true" org.eventb.core.identifier="stm2"/>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Sense_Temperatures">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Sense_Temperatures"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Calculate_Average_Temperature">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Calculate_Average_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Display_Current_Temperature">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Display_Current_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Get_Target_Temperature2">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Get_Target_Temperature2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TurnON_Heat_Source">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TurnON_Heat_Source"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TurnOFF_Heat_Source">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TurnOFF_Heat_Source"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Set_Heat_Source_State">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Set_Heat_Source_State"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Actuate_Heat_Source">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Actuate_Heat_Source"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="SwitchOn_OverHeat_Alram">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="SwitchOn_OverHeat_Alram"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="SwitchOff_OverHeat_Alram">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="SwitchOff_OverHeat_Alram"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Actuate_OverHeat_Alram">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Actuate_OverHeat_Alram"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

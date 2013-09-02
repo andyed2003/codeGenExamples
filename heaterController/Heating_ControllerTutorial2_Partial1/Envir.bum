@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile ch.ethz.eventb.decomposition.decomposed="true" org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" org.eventb.core.generated="true" version="5">
+<org.eventb.core.seesContext name="_91wE8Ax3EeG-k7RMHj65Mg" org.eventb.core.target="HC_CONTEXT"/>
+<org.eventb.core.variable name="'" org.eventb.core.identifier="inc_flag"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="dec_flag"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="ts1"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="ts2"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="hss"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="ctd"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="ttd"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="hsa"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="aota"/>
+<org.eventb.core.variable name="0" org.eventb.core.identifier="anha"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="typing_aota" org.eventb.core.predicate="aota ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="typing_ttd" org.eventb.core.predicate="ttd ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="typing_ts2" org.eventb.core.predicate="ts2 ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="typing_hss" org.eventb.core.predicate="hss ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="typing_ts1" org.eventb.core.predicate="ts1 ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="typing_inc_flag" org.eventb.core.predicate="inc_flag ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="typing_dec_flag" org.eventb.core.predicate="dec_flag ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="8" org.eventb.core.label="typing_hsa" org.eventb.core.predicate="hsa ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="9" org.eventb.core.label="typing_anha" org.eventb.core.predicate="anha ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name=":" org.eventb.core.label="typing_ctd" org.eventb.core.predicate="ctd ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="ctd ≔ 0" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="ttd ≔ 20" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="hss ≔ FALSE" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="ts1 ≔ 0" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="ts2 ≔ 0" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="inc_flag ≔  FALSE" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="dec_flag ≔  FALSE" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="hsa ≔ FALSE" org.eventb.core.label="act18"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="aota ≔ FALSE" org.eventb.core.label="act19"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="anha ≔ FALSE" org.eventb.core.label="act20"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PressIncrease_Target_Temperature">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="inc_flag = FALSE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="inc_flag ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Sense_PressIncrease_Target_Temperature">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="state_inc"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="state_inc ∈ BOOL"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="state_inc = inc_flag"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Reset_Increase_Flag">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="inc_flag = TRUE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="inc_flag ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PressDecrease_Target_Temperature">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="dec_flag = FALSE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="dec_flag ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Sense_PressDecrease_Target_Temperature">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="state_dec"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="state_dec ∈ BOOL"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="state_dec = dec_flag"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Reset_Decrease_Flag">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="dec_flag = TRUE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="dec_flag ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Display_Target_Temperature">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="tm_tt"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="tm_tt ∈ ℤ"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="ttd ≔tm_tt" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Alter_Temperature_Sensor1">
+<org.eventb.core.action name="'" org.eventb.core.assignment="ts1 :∈ ℤ" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Alter_Temperature_Sensor2">
+<org.eventb.core.action name="'" org.eventb.core.assignment="ts2 :∈ ℤ" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Sense_Temperatures">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="t1"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="t2"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="t1 ∈ ℤ"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="t2 ∈ ℤ"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="t1 = ts1"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="t2 = ts2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Display_Current_Temperature">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="tm_avt"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="tm_avt ∈ ℤ"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="ctd ≔ tm_avt" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Actuate_Heat_Source">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="state_hsc"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="state_hsc ∈ BOOL"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="hsa ≔ state_hsc" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Actuate_OverHeat_Alram">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="state_ota"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="state_ota ∈ BOOL"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="aota ≔ state_ota" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Alter_Heater_Status">
+<org.eventb.core.action name="'" org.eventb.core.assignment="hss :∈ BOOL" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Sense_Heater_Status">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="state_hss"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="state_hss ∈ BOOL"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="state_hss = hss"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Actuate_NoHeat_Alarm">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="state_nha"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="state_nha ∈ BOOL"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="anha ≔ state_nha" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment=" " org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="_7e9dwXHbEeKQ07Fd56_lVg" org.eventb.core.target="Heater_Monitor_Task"/>
+<org.eventb.core.seesContext name="_7e9dwnHbEeKQ07Fd56_lVg" org.eventb.core.target="HC_CONTEXT"/>
+<org.eventb.tasking.persistence.MachineType name="_lpyGAAVtEeGkNrpPIEpSLw" org.eventb.tasking.persistence.machineTypeAttribute="AutoTask" org.eventb.tasking.persistence.priority="5">
+<org.eventb.tasking.persistence.TaskType name="_ohww0BtHEeGm6oQgdGZz_A" org.eventb.tasking.persistence.periodicTaskTypeAttribute="250" org.eventb.tasking.persistence.taskTypeAttribute="Periodic"/>
+<org.eventb.tasking.persistence.TaskBody name="_ohww0RtHEeGm6oQgdGZz_A" org.eventb.compositeControl.persistence.compcontrolfeatureid="9" org.eventb.tasking.persistence.taskBodyAttribute=" Sense_Heater_Status ;&#10; Get_Stored_HeatSource ;&#10; if SwitchOn_NoHeat_Alarm&#10; else SwitchOff_NoHeat_Alarm ;&#10; Actuate_NoHeat_Alarm"/>
+</org.eventb.tasking.persistence.MachineType>
+<org.eventb.core.variable name="'" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="hs1"/>
+<org.eventb.core.variable name="(" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="nha"/>
+<org.eventb.core.variable name=")" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="shs"/>
+<org.eventb.core.invariant name="inv1" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_nha" org.eventb.core.predicate="nha ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv2" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_shs" org.eventb.core.predicate="shs ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv3" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_hs1" org.eventb.core.predicate="hs1 ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="nha ≔ FALSE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="shs ≔ FALSE" org.eventb.core.label="act15"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="hs1 ≔ FALSE" org.eventb.core.label="act27"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Sense_Heater_Status">
+<org.eventb.core.refinesEvent name="_7fBIIHHbEeKQ07Fd56_lVg" org.eventb.core.target="Sense_Heater_Status"/>
+<org.eventb.tasking.persistence.implementation name="_wabRsAa4EeGJB8n8WknmtQ" org.eventb.tasking.persistence.impltype="5"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="state_hss"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="state_hss ∈ BOOL"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="shs ≔ state_hss" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Get_Stored_HeatSource">
+<org.eventb.core.refinesEvent name="_7fBIIXHbEeKQ07Fd56_lVg" org.eventb.core.target="Get_Stored_HeatSource"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="state"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="state ∈ BOOL"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="hs1 ≔ state" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SwitchOn_NoHeat_Alarm">
+<org.eventb.core.refinesEvent name="_7fBvMHHbEeKQ07Fd56_lVg" org.eventb.core.target="SwitchOn_NoHeat_Alarm"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="hs1 ≠ shs"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="nha ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SwitchOff_NoHeat_Alarm">
+<org.eventb.core.refinesEvent name="_7fBvMXHbEeKQ07Fd56_lVg" org.eventb.core.target="SwitchOff_NoHeat_Alarm"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="hs1 = shs"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="nha ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Actuate_NoHeat_Alarm">
+<org.eventb.core.refinesEvent name="_7fBvMnHbEeKQ07Fd56_lVg" org.eventb.core.target="Actuate_NoHeat_Alarm"/>
+<org.eventb.tasking.persistence.implementation name="_wae8EQa4EeGJB8n8WknmtQ" org.eventb.tasking.persistence.impltype="6"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="state_nha"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="state_nha ∈ BOOL"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="state_nha = nha"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

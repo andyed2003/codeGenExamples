@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Max" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Min" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="Mio" org.eventb.core.predicate="Max=45" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_h0ofwbQyEd6JWeKUaZSm_A"/>
+<org.eventb.core.poPredicate name="Mip" org.eventb.core.predicate="Min=5" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_jizYMd9oEd6bH8yoa_-5nQ"/>
+<org.eventb.core.poPredicate name="Miq" org.eventb.core.predicate="Max∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_Kn5b0ASjEeGArsFhTHrpLw"/>
+<org.eventb.core.poPredicate name="Mir" org.eventb.core.predicate="Min∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_Kn5b0QSjEeGArsFhTHrpLw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="avt" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ctm" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cttm" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cttm1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cttm2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="hs1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="hsc" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="nha" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="ota" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="sdec_flag" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="shs" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="shss" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="sinc_flag" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="stm1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="stm2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ttm" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="sinc_flah" org.eventb.core.predicate="stm1∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="sinc_flai" org.eventb.core.predicate="avt∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="sinc_flaj" org.eventb.core.predicate="nha∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="sinc_flak" org.eventb.core.predicate="stm2∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.invariant#4"/>
+<org.eventb.core.poPredicate name="sinc_flal" org.eventb.core.predicate="hsc∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="sinc_flam" org.eventb.core.predicate="shs∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.invariant#6"/>
+<org.eventb.core.poPredicate name="sinc_flan" org.eventb.core.predicate="ota∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.invariant#7"/>
+<org.eventb.core.poPredicate name="sinc_flao" org.eventb.core.predicate="ttm∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.invariant#8"/>
+<org.eventb.core.poPredicate name="sinc_flap" org.eventb.core.predicate="sdec_flag∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.invariant#9"/>
+<org.eventb.core.poPredicate name="sinc_flaq" org.eventb.core.predicate="sinc_flag∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poPredicate name="sinc_flar" org.eventb.core.predicate="shs∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.invariant#;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/act32/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXq">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="stm1'∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#,"/>
+<org.eventb.core.poPredicate name="(" org.eventb.core.predicate="stm2'∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#-"/>
+<org.eventb.core.poPredicate name=")" org.eventb.core.predicate="shs'∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℤ≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#6|org.eventb.core.action#_bpfxAN39Ed-w2bJZ62iTqg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#6|org.eventb.core.action#_bpfxAN39Ed-w2bJZ62iTqg"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXq"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act21/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXq">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="stm1'∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#,"/>
+<org.eventb.core.poPredicate name="(" org.eventb.core.predicate="stm2'∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#-"/>
+<org.eventb.core.poPredicate name=")" org.eventb.core.predicate="shs'∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℤ≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#6|org.eventb.core.action#_auQtgtrsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#6|org.eventb.core.action#_auQtgtrsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXq"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act22/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXq">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="stm1'∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#,"/>
+<org.eventb.core.poPredicate name="(" org.eventb.core.predicate="stm2'∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#-"/>
+<org.eventb.core.poPredicate name=")" org.eventb.core.predicate="shs'∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℤ≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#6|org.eventb.core.action#_auQtg9rsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#6|org.eventb.core.action#_auQtg9rsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXq"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act26/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXq">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="stm1'∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#,"/>
+<org.eventb.core.poPredicate name="(" org.eventb.core.predicate="stm2'∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#-"/>
+<org.eventb.core.poPredicate name=")" org.eventb.core.predicate="shs'∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℤ≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#6|org.eventb.core.action#_6jP0kNtZEd--zJxpUlasPA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#6|org.eventb.core.action#_6jP0kNtZEd--zJxpUlasPA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXq"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act29/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXq">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="stm1'∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#,"/>
+<org.eventb.core.poPredicate name="(" org.eventb.core.predicate="stm2'∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#-"/>
+<org.eventb.core.poPredicate name=")" org.eventb.core.predicate="shs'∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#=|org.eventb.core.action#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BOOL≠(∅ ⦂ ℙ(BOOL))" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#6|org.eventb.core.action#_jHSIkN1KEd-w04F_HUlxdg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#6|org.eventb.core.action#_jHSIkN1KEd-w04F_HUlxdg"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXq"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEXq" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="nha'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="hs1'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="shss'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="cttm1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ctm'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ota'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="cttm'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="avt'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="sinc_flag'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="stm1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="shs'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="sdec_flag'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="stm2'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="hsc'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="ttm'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cttm2'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEXq" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEXq" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEXr" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cttm1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tm" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEXr" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEXr" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="tm∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auSisdrsEd-pf4uW-3WsZQ|org.eventb.core.guard#_auSis9rsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tm=cttm" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auSisdrsEd-pf4uW-3WsZQ|org.eventb.core.guard#_auSitNrsEd-pf4uW-3WsZQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEXs" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="state_inc" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="sinc_flag'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEXs" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEXs" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state_inc∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#&gt;|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Raise_Target_Temperature/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cttm1&lt;Max" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#?|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#?"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#?|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#Raise_Target_Temperature\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Raise_Target_Temperature/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cttm1+1=cttm1+1" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#?|org.eventb.core.action#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#?"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#?|org.eventb.core.action#+"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#Raise_Target_Temperature\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEXt" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="sinc_flag'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="ttm'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEXt" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEXt" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cttm1&lt;Max" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="sinc_flag=TRUE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#7|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Raise_Target_Temperature_Blocked/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="¬cttm1&lt;Max" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#@|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#@"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#@|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_RnNhAEmbEeC7k-qEuuQB5Q"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#Raise_Target_Temperature_Blocked\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEXu" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="sinc_flag'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEXu" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEXu" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sinc_flag=TRUE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_RnNhAEmbEeC7k-qEuuQB5Q|org.eventb.core.guard#_RnNhAkmbEeC7k-qEuuQB5Q"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="¬cttm1&lt;Max" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_RnNhAEmbEeC7k-qEuuQB5Q|org.eventb.core.guard#_RnNhA0mbEeC7k-qEuuQB5Q"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEXv" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="sdec_flag'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="state_dec" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEXv" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEXv" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state_dec∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#A|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Lower_Target_Temperature/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cttm1&gt;Min" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#B|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#B"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#B|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auR7o9rsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#Lower_Target_Temperature\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Lower_Target_Temperature/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cttm1 − 1=cttm1 − 1" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#B|org.eventb.core.action#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#B"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#B|org.eventb.core.action#+"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auR7o9rsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#Lower_Target_Temperature\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEXw" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="sdec_flag'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="ttm'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEXw" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEXw" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sdec_flag=TRUE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auR7o9rsEd-pf4uW-3WsZQ|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cttm1&gt;Min" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auR7o9rsEd-pf4uW-3WsZQ|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Lower_Target_Temperature_Blocked/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEXx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="¬cttm1&gt;Min" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#C|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#C"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#C|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_RnOvIEmbEeC7k-qEuuQB5Q"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#Lower_Target_Temperature_Blocked\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEXx" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="sdec_flag'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEXx" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEXx" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sdec_flag=TRUE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_RnOvIEmbEeC7k-qEuuQB5Q|org.eventb.core.guard#_RnOvIkmbEeC7k-qEuuQB5Q"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="¬cttm1&gt;Min" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_RnOvIEmbEeC7k-qEuuQB5Q|org.eventb.core.guard#_RnOvI0mbEeC7k-qEuuQB5Q"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEXy" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cttm'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEXy" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEXy" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="tm∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_E4oXYd30Ed-w2bJZ62iTqg|org.eventb.core.guard#_E4oXY930Ed-w2bJZ62iTqg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tm=ttm" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_E4oXYd30Ed-w2bJZ62iTqg|org.eventb.core.guard#_E4oXZN30Ed-w2bJZ62iTqg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEXz" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm_tt" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEXz" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEXz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="tm_tt∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#D|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tm_tt=ttm" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#D|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEX{" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="t1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="t2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="stm1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="stm2'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEX{" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEX{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="t1∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#E|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="t2∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#E|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Calculate_Average_Temperature/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEX\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2≠0" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_QNr2gkqREeC-jK3y8pmJhw|org.eventb.core.action#_dBQ0Q91EEd-mlOfaBFF3cw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_QNr2gkqREeC-jK3y8pmJhw|org.eventb.core.action#_dBQ0Q91EEd-mlOfaBFF3cw"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEX\|"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Calculate_Average_Temperature/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEX\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(stm1+stm2) ÷ 2=(stm1+stm2) ÷ 2" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#F|org.eventb.core.action#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#F"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#F|org.eventb.core.action#+"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_QNr2gkqREeC-jK3y8pmJhw"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#Calculate_Average_Temperature\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEX|" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="avt'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tm2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tm1" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEX|" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEX\|" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEX}" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm_avt" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEX}" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEX}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="tm_avt=avt" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auUX5NrsEd-pf4uW-3WsZQ|org.eventb.core.guard#_u-1QgUqGEeC-jK3y8pmJhw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tm_avt∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auUX5NrsEd-pf4uW-3WsZQ|org.eventb.core.guard#_u-1QgkqGEeC-jK3y8pmJhw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEX~" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cttm2'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEX~" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEX~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="tm∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_6jUGAdtZEd--zJxpUlasPA|org.eventb.core.guard#_6jUGA9tZEd--zJxpUlasPA"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tm=cttm" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_6jUGAdtZEd--zJxpUlasPA|org.eventb.core.guard#_6jUtENtZEd--zJxpUlasPA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="TurnON_Heat_Source/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEY'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="avt&lt;cttm2" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#H|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#H"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#H|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auU-89rsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#TurnON_Heat_Source\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY'" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tm1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="hsc'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY'" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="avt&lt;cttm2" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auU-89rsEd-pf4uW-3WsZQ|org.eventb.core.guard#_auU-9drsEd-pf4uW-3WsZQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="TurnOFF_Heat_Source/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEY("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="avt≥cttm2" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#I|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#I"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#I|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auVmAdrsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#TurnOFF_Heat_Source\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY(" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tm1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="hsc'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY(" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="avt≥cttm2" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auVmAdrsEd-pf4uW-3WsZQ|org.eventb.core.guard#_auVmA9rsEd-pf4uW-3WsZQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY)" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="shss'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="state" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY)" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auXbMtrsEd-pf4uW-3WsZQ|org.eventb.core.guard#_auYCQNrsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="state=hsc" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auXbMtrsEd-pf4uW-3WsZQ|org.eventb.core.guard#_auYCQdrsEd-pf4uW-3WsZQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY*" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="state_hsc" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY*" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY*" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state_hsc∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#J|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="state_hsc=hsc" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#J|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SwitchOn_OverHeat_Alram/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEY+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="avt&gt;Max" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#K|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#K"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#K|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auW0IdrsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#SwitchOn_OverHeat_Alram\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY+" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ota'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY+" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="avt&gt;Max" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auW0IdrsEd-pf4uW-3WsZQ|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SwitchOff_OverHeat_Alram/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEY,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="avt≤Max" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#L|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#L"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#L|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auW0I9rsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#SwitchOff_OverHeat_Alram\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY," org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="tm" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ota'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY," org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="avt≤Max" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auW0I9rsEd-pf4uW-3WsZQ|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY-" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="state_ota" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY-" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state_ota∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#M|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="state_ota=ota" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#M|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY." org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="shs'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="state_hss" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY." org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY." org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state_hss∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#N|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY/" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="hs1'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="state" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY/" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY\/" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auVmBtrsEd-pf4uW-3WsZQ|org.eventb.core.guard#_auWNEdrsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="state=shss" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auVmBtrsEd-pf4uW-3WsZQ|org.eventb.core.guard#_auWNEtrsEd-pf4uW-3WsZQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SwitchOn_NoHeat_Alarm/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEY0"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="hs1≠shs" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#O|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#O"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#O|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auYCQ9rsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#SwitchOn_NoHeat_Alarm\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY0" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="nha'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="state2" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="state1" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY0" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY0" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="hs1≠shs" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auYCQ9rsEd-pf4uW-3WsZQ|org.eventb.core.guard#_auYCRdrsEd-pf4uW-3WsZQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SwitchOff_NoHeat_Alarm/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTALLHYPHC_CONTEY1"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="hs1=shs" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#P|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#P"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#P|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auYpUtrsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poSequent#SwitchOff_NoHeat_Alarm\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY1" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="nha'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="state2" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="state1" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY1" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY1" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="hs1=shs" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.event#_auYpUtrsEd-pf4uW-3WsZQ|org.eventb.core.guard#_auYpVNrsEd-pf4uW-3WsZQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTHC_CONTEY2" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="state_nha" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPHC_CONTEY2" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#EVTIDENTHC_CONTEY2" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state_nha∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#Q|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="state_nha=nha" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M0.bum|org.eventb.core.machineFile#HCtrl_M0|org.eventb.core.event#Q|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bpo|org.eventb.core.poFile#HCtrl_M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cttm∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#_bpcGoN39Ed-w2bJZ62iTqg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cttm1∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#_auQGctrsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cttm2∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#_auQGc9rsEd-pf4uW-3WsZQ"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ctm∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#_6jPNgNtZEd--zJxpUlasPA"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="hs1∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#_dBL7wN1EEd-mlOfaBFF3cw"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="stm1∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="avt∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="nha∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="stm2∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="hsc∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="shs∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#inv6"/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="ota∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="ttm∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="sdec_flag∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="sinc_flag∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#inv10"/>
+<org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="shs∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poPredicate name="PRD16" org.eventb.core.predicate="shss∈BOOL" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HCtrl_M1.bum|org.eventb.core.machineFile#HCtrl_M1|org.eventb.core.invariant#_jHQ6cN1KEd-w04F_HUlxdg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

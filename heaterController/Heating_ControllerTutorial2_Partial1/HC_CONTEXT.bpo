@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Max" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Min" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Heating_ControllerTutorial2_Partial1/HC_CONTEXT.bpo|org.eventb.core.poFile#HC_CONTEXT|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Max=45" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_h0ofwbQyEd6JWeKUaZSm_A"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Min=5" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_jizYMd9oEd6bH8yoa_-5nQ"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Max∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_Kn5b0ASjEeGArsFhTHrpLw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Min∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Partial1/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_Kn5b0QSjEeGArsFhTHrpLw"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

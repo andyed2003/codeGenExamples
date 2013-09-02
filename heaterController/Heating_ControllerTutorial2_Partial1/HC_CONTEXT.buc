@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.codegen.ui.taskingContextAttribute="NonTasking" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" org.eventb.texttools.text_lastmodified="1259778702228" org.eventb.texttools.text_representation="context HC_CONTEXT&#13;&#13;constants Max Min&#13;&#13;&#13;axioms&#13;  @axm1 Max ∈ ℤ&#13;  @axm2 Min ∈ ℤ&#13;end&#13;" version="3">
+<org.eventb.core.constant name="_h0ofwLQyEd6JWeKUaZSm_A" org.eventb.core.identifier="Max"/>
+<org.eventb.core.constant name="_jizYMN9oEd6bH8yoa_-5nQ" org.eventb.core.identifier="Min"/>
+<org.eventb.core.axiom name="_h0ofwbQyEd6JWeKUaZSm_A" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm1" org.eventb.core.predicate="Max = 45"/>
+<org.eventb.core.axiom name="_jizYMd9oEd6bH8yoa_-5nQ" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm2" org.eventb.core.predicate="Min = 5"/>
+<org.eventb.core.axiom name="_Kn5b0ASjEeGArsFhTHrpLw" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm3" org.eventb.core.predicate="Max ∈ ℤ"/>
+<org.eventb.core.axiom name="_Kn5b0QSjEeGArsFhTHrpLw" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm4" org.eventb.core.predicate="Min ∈ ℤ "/>
+</org.eventb.core.contextFile>

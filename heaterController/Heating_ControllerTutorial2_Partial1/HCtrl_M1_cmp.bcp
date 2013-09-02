@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ac.soton.composition.core.composedMachineFile org.eventb.core.comment="" org.eventb.core.configuration="ac.soton.composition.core.cmp" version="7">
+<ac.soton.composition.core.refinesMachine ac.soton.composition.core.target="HCtrl_M1" name="internal_refines1"/>
+<ac.soton.composition.core.seesContext ac.soton.composition.core.target="HC_CONTEXT" name="internal_sees1"/>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="Heating_ControllerTutorial2_Completed" ac.soton.composition.core.target="Shared_Object_IMPL" name="internal_includes1"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events1" org.eventb.core.convergence="0" org.eventb.core.label="INITIALISATION">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Shared_Object_IMPL" name="internal_combines events1" org.eventb.core.target="INITIALISATION"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events2" org.eventb.core.target="INITIALISATION"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Heater_Monitor_Task_IMPL" name="internal_combines events3" org.eventb.core.target="INITIALISATION"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Display_Update_Task_IMPL" name="internal_combines events4" org.eventb.core.target="INITIALISATION"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events2" org.eventb.core.convergence="0" org.eventb.core.label="Get_Target_Temperature1">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Shared_Object_IMPL" name="internal_combines events1" org.eventb.core.target="Get_Target_Temperature1"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Get_Target_Temperature1"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Display_Update_Task_IMPL" name="internal_combines events2" org.eventb.core.target="Get_Target_Temperature1"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events3" org.eventb.core.convergence="0" org.eventb.core.label="Set_Target_Temperature">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Shared_Object_IMPL" name="internal_combines events1" org.eventb.core.target="Set_Target_Temperature"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Set_Target_Temperature"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Display_Update_Task_IMPL" name="internal_combines events2" org.eventb.core.target="Set_Target_Temperature"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events4" org.eventb.core.convergence="0" org.eventb.core.label="Get_Target_Temperature2">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Shared_Object_IMPL" name="internal_combines events1" org.eventb.core.target="Get_Target_Temperature2"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Get_Target_Temperature2"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events2" org.eventb.core.target="Get_Target_Temperature2"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events5" org.eventb.core.convergence="0" org.eventb.core.label="Set_Heat_Source_State">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Shared_Object_IMPL" name="internal_combines events1" org.eventb.core.target="Set_Heat_Source_State"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Set_Heat_Source_State"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events2" org.eventb.core.target="Set_Heat_Source_State"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events6" org.eventb.core.convergence="0" org.eventb.core.label="Get_Stored_HeatSource">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Shared_Object_IMPL" name="internal_combines events1" org.eventb.core.target="Get_Stored_HeatSource"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Get_Stored_HeatSource"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Heater_Monitor_Task_IMPL" name="internal_combines events2" org.eventb.core.target="Get_Stored_HeatSource"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="Heating_ControllerTutorial2_Completed" ac.soton.composition.core.target="Temp_Ctrl_Task_IMPL" name="internal_includes2"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events7" org.eventb.core.convergence="0" org.eventb.core.label="Sense_Temperatures">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Sense_Temperatures"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Sense_Temperatures"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="internal_refines2" org.eventb.core.target="Sense_Temperatures"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events8" org.eventb.core.convergence="0" org.eventb.core.label="Calculate_Average_Temperature">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Calculate_Average_Temperature"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Calculate_Average_Temperature"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events9" org.eventb.core.convergence="0" org.eventb.core.label="Display_Current_Temperature">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Display_Current_Temperature"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Display_Current_Temperature"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="internal_refines2" org.eventb.core.target="Display_Current_Temperature"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events10" org.eventb.core.convergence="0" org.eventb.core.label="TurnON_Heat_Source">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events1" org.eventb.core.target="TurnON_Heat_Source"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="TurnON_Heat_Source"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events11" org.eventb.core.convergence="0" org.eventb.core.label="TurnOFF_Heat_Source">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events1" org.eventb.core.target="TurnOFF_Heat_Source"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="TurnOFF_Heat_Source"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events12" org.eventb.core.convergence="0" org.eventb.core.label="Actuate_Heat_Source">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Actuate_Heat_Source"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Actuate_Heat_Source"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="internal_refines2" org.eventb.core.target="Actuate_Heat_Source"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events13" org.eventb.core.convergence="0" org.eventb.core.label="SwitchOn_OverHeat_Alram">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events1" org.eventb.core.target="SwitchOn_OverHeat_Alram"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="SwitchOn_OverHeat_Alram"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events14" org.eventb.core.convergence="0" org.eventb.core.label="SwitchOff_OverHeat_Alram">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events1" org.eventb.core.target="SwitchOff_OverHeat_Alram"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="SwitchOff_OverHeat_Alram"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events15" org.eventb.core.convergence="0" org.eventb.core.label="Actuate_OverHeat_Alram">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Temp_Ctrl_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Actuate_OverHeat_Alram"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Actuate_OverHeat_Alram"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="internal_refines2" org.eventb.core.target="Actuate_OverHeat_Alram"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="Heating_ControllerTutorial2_Completed" ac.soton.composition.core.target="Heater_Monitor_Task_IMPL" name="internal_includes3"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events16" org.eventb.core.convergence="0" org.eventb.core.label="Sense_Heater_Status">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Heater_Monitor_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Sense_Heater_Status"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Sense_Heater_Status"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="internal_refines2" org.eventb.core.target="Sense_Heater_Status"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events17" org.eventb.core.convergence="0" org.eventb.core.label="SwitchOn_NoHeat_Alarm">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Heater_Monitor_Task_IMPL" name="internal_combines events1" org.eventb.core.target="SwitchOn_NoHeat_Alarm"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="SwitchOn_NoHeat_Alarm"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events18" org.eventb.core.convergence="0" org.eventb.core.label="SwitchOff_NoHeat_Alarm">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Heater_Monitor_Task_IMPL" name="internal_combines events1" org.eventb.core.target="SwitchOff_NoHeat_Alarm"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="SwitchOff_NoHeat_Alarm"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events19" org.eventb.core.convergence="0" org.eventb.core.label="Actuate_NoHeat_Alarm">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Heater_Monitor_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Actuate_NoHeat_Alarm"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Actuate_NoHeat_Alarm"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="internal_refines2" org.eventb.core.target="Actuate_NoHeat_Alarm"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="Heating_ControllerTutorial2_Completed" ac.soton.composition.core.target="Display_Update_Task_IMPL" name="internal_includes4"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events20" org.eventb.core.convergence="0" org.eventb.core.label="Sense_PressIncrease_Target_Temperature">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Display_Update_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Sense_PressIncrease_Target_Temperature"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Sense_PressIncrease_Target_Temperature"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="internal_refines2" org.eventb.core.target="Sense_PressIncrease_Target_Temperature"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events21" org.eventb.core.convergence="0" org.eventb.core.label="Raise_Target_Temperature">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Display_Update_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Raise_Target_Temperature"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Raise_Target_Temperature"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events22" org.eventb.core.convergence="0" org.eventb.core.label="Raise_Target_Temperature_Blocked">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Display_Update_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Raise_Target_Temperature_Blocked"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Raise_Target_Temperature_Blocked"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events23" org.eventb.core.convergence="0" org.eventb.core.label="Sense_PressDecrease_Target_Temperature">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Display_Update_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Sense_PressDecrease_Target_Temperature"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Sense_PressDecrease_Target_Temperature"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="internal_refines2" org.eventb.core.target="Sense_PressDecrease_Target_Temperature"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events24" org.eventb.core.convergence="0" org.eventb.core.label="Lower_Target_Temperature">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Display_Update_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Lower_Target_Temperature"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Lower_Target_Temperature"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events25" org.eventb.core.convergence="0" org.eventb.core.label="Lower_Target_Temperature_Blocked">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Display_Update_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Lower_Target_Temperature_Blocked"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Lower_Target_Temperature_Blocked"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events26" org.eventb.core.convergence="0" org.eventb.core.label="Display_Target_Temperature">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Display_Update_Task_IMPL" name="internal_combines events1" org.eventb.core.target="Display_Target_Temperature"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="Display_Target_Temperature"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="internal_refines2" org.eventb.core.target="Display_Target_Temperature"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="Heating_ControllerTutorial2_Completed" ac.soton.composition.core.target="Envir1_IMPL" name="internal_includes5"/>
+<ac.soton.composition.core.composesEvent name="internal_includes6" org.eventb.core.convergence="0" org.eventb.core.label="PressIncrease_Target_Temperature">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="(" org.eventb.core.target="PressIncrease_Target_Temperature"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent name="internal_includes7" org.eventb.core.convergence="0" org.eventb.core.label="Reset_Increase_Flag">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="(" org.eventb.core.target="Reset_Increase_Flag"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent name="internal_includes8" org.eventb.core.convergence="0" org.eventb.core.label="PressDecrease_Target_Temperature">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="(" org.eventb.core.target="PressDecrease_Target_Temperature"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent name="internal_includes9" org.eventb.core.convergence="0" org.eventb.core.label="Reset_decrease_Flag">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="(" org.eventb.core.target="Reset_decrease_Flag"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent name="internal_includes:" org.eventb.core.convergence="0" org.eventb.core.label="Alter_Temperature_Sensor1">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="(" org.eventb.core.target="Alter_Temperature_Sensor1"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent name="internal_includes;" org.eventb.core.convergence="0" org.eventb.core.label="Alter_Temperature_Sensor2">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="(" org.eventb.core.target="Alter_Temperature_Sensor2"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent name="internal_includes=" org.eventb.core.convergence="0" org.eventb.core.label="Alter_Heater_Status">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[Heating_ControllerTutorial2_Completed]Envir1_IMPL" name="(" org.eventb.core.target="Alter_Heater_Status"/>
+</ac.soton.composition.core.composesEvent>
+</ac.soton.composition.core.composedMachineFile>
