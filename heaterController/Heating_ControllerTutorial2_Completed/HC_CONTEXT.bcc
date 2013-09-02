@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="Max=45" org.eventb.core.source="/Heating_ControllerTutorial2_Completed/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_h0ofwbQyEd6JWeKUaZSm_A" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="Min=5" org.eventb.core.source="/Heating_ControllerTutorial2_Completed/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_jizYMd9oEd6bH8yoa_-5nQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="Max∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Completed/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_Kn5b0ASjEeGArsFhTHrpLw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="*" org.eventb.core.label="axm4" org.eventb.core.predicate="Min∈ℤ" org.eventb.core.source="/Heating_ControllerTutorial2_Completed/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.axiom#_Kn5b0QSjEeGArsFhTHrpLw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Max" org.eventb.core.source="/Heating_ControllerTutorial2_Completed/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.constant#_h0ofwLQyEd6JWeKUaZSm_A" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant name="Min" org.eventb.core.source="/Heating_ControllerTutorial2_Completed/HC_CONTEXT.buc|org.eventb.core.contextFile#HC_CONTEXT|org.eventb.core.constant#_jizYMN9oEd6bH8yoa_-5nQ" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scContextFile>

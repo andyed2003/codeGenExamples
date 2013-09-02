@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="" org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="_-vO7sHHbEeKQ07Fd56_lVg" org.eventb.core.target="Temp_Ctrl_Task"/>
+<org.eventb.core.seesContext name="_-vO7sXHbEeKQ07Fd56_lVg" org.eventb.core.target="HC_CONTEXT"/>
+<org.eventb.tasking.persistence.MachineType name="_PGhDUQU_EeGkNrpPIEpSLw" org.eventb.tasking.persistence.machineTypeAttribute="AutoTask" org.eventb.tasking.persistence.priority="5">
+<org.eventb.tasking.persistence.TaskType name="_vo6ZsBtHEeGm6oQgdGZz_A" org.eventb.tasking.persistence.periodicTaskTypeAttribute="250" org.eventb.tasking.persistence.taskTypeAttribute="Periodic"/>
+<org.eventb.tasking.persistence.TaskBody name="_vo6ZsRtHEeGm6oQgdGZz_A" org.eventb.compositeControl.persistence.compcontrolfeatureid="9" org.eventb.tasking.persistence.taskBodyAttribute=" Sense_Temperatures ;&#10; Calculate_Average_Temperature ;&#10; Display_Current_Temperature ;&#10; Get_Target_Temperature2 ;&#10; if TurnON_Heat_Source&#10; else TurnOFF_Heat_Source ;&#10; Set_Heat_Source_State ;&#10; Actuate_Heat_Source ;&#10; if SwitchOn_OverHeat_Alram&#10; else SwitchOff_OverHeat_Alram ;&#10; Actuate_OverHeat_Alram ;&#10; output &quot;heat on = &quot; hsc ;&#10; output &quot;ota on = &quot; ota ;&#10; output &quot;avt temp :&quot; avt"/>
+</org.eventb.tasking.persistence.MachineType>
+<org.eventb.core.variable name="'" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="avt"/>
+<org.eventb.core.variable name="(" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="cttm2"/>
+<org.eventb.core.variable name=")" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="hsc"/>
+<org.eventb.core.variable name="*" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="ota"/>
+<org.eventb.core.variable name="+" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="stm1"/>
+<org.eventb.core.variable name="," org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="stm2"/>
+<org.eventb.core.invariant name="inv1" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_stm1" org.eventb.core.predicate="stm1 ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv2" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_avt" org.eventb.core.predicate="avt ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv3" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_stm2" org.eventb.core.predicate="stm2 ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv4" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_hsc" org.eventb.core.predicate="hsc ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv5" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_ota" org.eventb.core.predicate="ota ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv6" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_cttm2" org.eventb.core.predicate="cttm2 ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="hsc ≔ FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="ota ≔ FALSE" org.eventb.core.label="act5"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="avt ≔ 0" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="stm1 ≔ 0" org.eventb.core.label="act13"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="stm2 ≔ 0" org.eventb.core.label="act14"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="cttm2 ≔ 0" org.eventb.core.label="act22"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Sense_Temperatures">
+<org.eventb.core.refinesEvent name="_-vQw4HHbEeKQ07Fd56_lVg" org.eventb.core.target="Sense_Temperatures"/>
+<org.eventb.tasking.persistence.implementation name="_5Mm5AAa4EeGJB8n8WknmtQ" org.eventb.tasking.persistence.impltype="5"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="t1"/>
+<org.eventb.core.parameter name="(" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="t2"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="t1 ∈ ℤ"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd2" org.eventb.core.predicate="t2 ∈ ℤ"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="stm1 ≔ t1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="stm2 ≔ t2" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Calculate_Average_Temperature">
+<org.eventb.core.refinesEvent name="_-vRX8HHbEeKQ07Fd56_lVg" org.eventb.core.target="Calculate_Average_Temperature"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="avt ≔ (stm1 + stm2) ÷ 2" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Display_Current_Temperature">
+<org.eventb.core.refinesEvent name="_-vRX8XHbEeKQ07Fd56_lVg" org.eventb.core.target="Display_Current_Temperature"/>
+<org.eventb.tasking.persistence.implementation name="_5MpVQQa4EeGJB8n8WknmtQ" org.eventb.tasking.persistence.impltype="6"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="tm_avt"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="tm_avt = avt"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="tm_avt ∈ ℤ"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Get_Target_Temperature2">
+<org.eventb.core.refinesEvent name="_-vRX8nHbEeKQ07Fd56_lVg" org.eventb.core.target="Get_Target_Temperature2"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="tm"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="tm ∈ ℤ"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="cttm2 ≔ tm" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TurnON_Heat_Source">
+<org.eventb.core.refinesEvent name="_-vR_AHHbEeKQ07Fd56_lVg" org.eventb.core.target="TurnON_Heat_Source"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="avt &lt; cttm2"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="hsc ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TurnOFF_Heat_Source">
+<org.eventb.core.refinesEvent name="_-vR_AXHbEeKQ07Fd56_lVg" org.eventb.core.target="TurnOFF_Heat_Source"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="avt ≥ cttm2"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="hsc ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Set_Heat_Source_State">
+<org.eventb.core.refinesEvent name="_-vR_AnHbEeKQ07Fd56_lVg" org.eventb.core.target="Set_Heat_Source_State"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="state"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="state ∈ BOOL"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="state = hsc"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Actuate_Heat_Source">
+<org.eventb.core.refinesEvent name="_-vSmEHHbEeKQ07Fd56_lVg" org.eventb.core.target="Actuate_Heat_Source"/>
+<org.eventb.tasking.persistence.implementation name="_5MuNwQa4EeGJB8n8WknmtQ" org.eventb.tasking.persistence.impltype="6"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="state_hsc"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="state_hsc ∈ BOOL"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="state_hsc = hsc"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SwitchOn_OverHeat_Alram">
+<org.eventb.core.refinesEvent name="_-vSmEXHbEeKQ07Fd56_lVg" org.eventb.core.target="SwitchOn_OverHeat_Alram"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="avt &gt; Max"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="ota ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SwitchOff_OverHeat_Alram">
+<org.eventb.core.refinesEvent name="_-vTNIHHbEeKQ07Fd56_lVg" org.eventb.core.target="SwitchOff_OverHeat_Alram"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="avt ≤ Max"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="ota ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Actuate_OverHeat_Alram">
+<org.eventb.core.refinesEvent name="_-vTNIXHbEeKQ07Fd56_lVg" org.eventb.core.target="Actuate_OverHeat_Alram"/>
+<org.eventb.tasking.persistence.implementation name="_5MxREQa4EeGJB8n8WknmtQ" org.eventb.tasking.persistence.impltype="6"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="state_ota"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="state_ota ∈ BOOL"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="state_ota = ota"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

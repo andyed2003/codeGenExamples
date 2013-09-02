@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Extending the Controller Machine with extra events in preperation for task-based decomposition." org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" org.eventb.texttools.text_lastmodified="1299708453155" org.eventb.texttools.text_representation="machine HCtrl_M1 // Extending the Controller Machine with extra events in preperation for task-based decomposition.&#10; refines HCtrl_M0  sees HC_CONTEXT&#10;&#10;variables hsc nha ota avt ttm stm1 stm2 shs sinc_flag sdec_flag cttm cttm1 cttm2 ctm hs1 shss&#10;&#10;invariants&#10;  @invar36 cttm ∈ ℤ&#10;  @invar25 cttm1 ∈ ℤ&#10;  @invar26 cttm2 ∈ ℤ&#10;  @invar30 ctm ∈ ℤ&#10;  @invar31 hs1 ∈ BOOL&#10;  @invar33 shss ∈ BOOL&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act32 cttm :∈ ℤ&#10;      @act21 cttm1 :∈ ℤ&#10;      @act22 cttm2 :∈ ℤ&#10;      @act26 ctm :∈ ℤ&#10;      @act27 hs1 ≔ FALSE&#10;      @act29 shss:∈ BOOL&#10;  end&#10;&#10;  event Get_Target_Temperature1&#10;    any tm&#10;    where&#10;      @grd1 tm ∈ ℤ&#10;      @grd2 tm = cttm&#10;    then&#10;      @act1 cttm1 ≔ tm&#10;  end&#10;&#10;  event Sense_PressIncrease_Target_Temperature extends Sense_PressIncrease_Target_Temperature&#10;  end&#10;&#10;  event Raise_Target_Temperature refines Raise_Target_Temperature&#10;    where&#10;      @grd1 cttm1 &lt; Max&#10;      @grd2 sinc_flag = TRUE&#10;    with&#10;      @tm tm = cttm1&#10;    then&#10;      @act1 ttm ≔ cttm1 +1&#10;      @act2 sinc_flag ≔ FALSE&#10;  end&#10;&#10;  event Raise_Target_Temperature_Blocked refines Raise_Target_Temperature_Blocked&#10;    where&#10;      @grd1 sinc_flag = TRUE&#10;      @grd2 ¬ (cttm1 &lt; Max)&#10;    with&#10;      @tm tm = cttm1&#10;    then&#10;      @act1 sinc_flag ≔ FALSE&#10;  end&#10;&#10;  event Sense_PressDecrease_Target_Temperature extends Sense_PressDecrease_Target_Temperature&#10;  end&#10;&#10;  event Lower_Target_Temperature refines Lower_Target_Temperature&#10;    where&#10;      @grd1 sdec_flag = TRUE&#10;      @grd2 cttm1 &gt; Min&#10;    with&#10;      @tm tm = cttm1&#10;    then&#10;      @act1 ttm ≔ cttm1 −1&#10;      @act2 sdec_flag ≔ FALSE&#10;  end&#10;&#10;  event Lower_Target_Temperature_Blocked refines Lower_Target_Temperature_Blocked&#10;    where&#10;      @grd1 sdec_flag = TRUE&#10;      @grd2 ¬ (cttm1 &gt; Min)&#10;    with&#10;      @tm tm = cttm1&#10;    then&#10;      @act1 sdec_flag ≔ FALSE&#10;  end&#10;&#10;  event Set_Target_Temperature&#10;    any tm&#10;    where&#10;      @grd1 tm ∈ ℤ&#10;      @grd2 tm = ttm&#10;    then&#10;      @act1 cttm ≔ tm&#10;  end&#10;&#10;  event Display_Target_Temperature extends Display_Target_Temperature&#10;  end&#10;&#10;  event Sense_Temperatures extends Sense_Temperatures&#10;  end&#10;&#10;  event Calculate_Average_Temperature refines Calculate_Average_Temperature&#10;    with&#10;      @tm1 tm1 = stm1&#10;      @tm2 tm2 = stm2&#10;    then&#10;      @act1 avt ≔ (stm1 + stm2) ÷ 2&#10;  end&#10;&#10;  event Display_Current_Temperature refines Display_Current_Temperature&#10;    any tm_avt&#10;    where&#10;      @grd2 tm_avt = avt&#10;      @grd1 tm_avt ∈ ℤ&#10;  end&#10;&#10;  event Get_Target_Temperature2&#10;    any tm&#10;    where&#10;      @grd1 tm ∈ ℤ&#10;      @grd2 tm = cttm&#10;    then&#10;      @act1 cttm2 ≔ tm&#10;  end&#10;&#10;  event TurnON_Heat_Source refines TurnON_Heat_Source&#10;    where&#10;      @grd1 avt &lt; cttm2&#10;    with&#10;      @tm1 tm1 = avt&#10;      @tm2 tm2 = cttm2&#10;    then&#10;      @act1 hsc ≔ TRUE&#10;  end&#10;&#10;  event TurnOFF_Heat_Source refines TurnOFF_Heat_Source&#10;    where&#10;      @grd1 avt ≥ cttm2&#10;    with&#10;      @tm1 tm1 = avt&#10;      @tm2 tm2 = cttm2&#10;    then&#10;      @act1 hsc ≔ FALSE&#10;  end&#10;&#10;  event Set_Heat_Source_State&#10;    any state&#10;    where&#10;      @grd1 state ∈ BOOL&#10;      @grd2 state = hsc&#10;    then&#10;      @act1 shss ≔ state&#10;  end&#10;&#10;  event Actuate_Heat_Source extends Actuate_Heat_Source&#10;  end&#10;&#10;  event SwitchOn_OverHeat_Alram refines SwitchOn_OverHeat_Alram&#10;    where&#10;      @grd1 avt &gt; Max&#10;    with&#10;      @tm tm = avt&#10;    then&#10;      @act1 ota ≔ TRUE&#10;  end&#10;&#10;  event SwitchOff_OverHeat_Alram refines SwitchOff_OverHeat_Alram&#10;    where&#10;      @grd3 avt ≤ Max&#10;    with&#10;      @tm tm = avt&#10;    then&#10;      @act1 ota ≔ FALSE&#10;  end&#10;&#10;  event Actuate_OverHeat_Alram extends Actuate_OverHeat_Alram&#10;  end&#10;&#10;  event Sense_Heater_Status extends Sense_Heater_Status&#10;  end&#10;&#10;  event Get_Stored_HeatSource&#10;    any state&#10;    where&#10;      @grd1 state ∈ BOOL&#10;      @grd2 state = shss&#10;    then&#10;      @act1 hs1 ≔ state&#10;  end&#10;&#10;  event SwitchOn_NoHeat_Alarm refines SwitchOn_NoHeat_Alarm&#10;    where&#10;      @grd1 hs1 ≠ shs&#10;    with&#10;      @state1 state1 = hs1&#10;      @state2 state2 = shs&#10;    then&#10;      @act1 nha ≔ TRUE&#10;  end&#10;&#10;  event SwitchOff_NoHeat_Alarm refines SwitchOff_NoHeat_Alarm&#10;    where&#10;      @grd1 hs1 = shs&#10;    with&#10;      @state1 state1 = hs1&#10;      @state2 state2 = shs&#10;    then&#10;      @act1 nha ≔ FALSE&#10;  end&#10;&#10;  event Actuate_NoHeat_Alarm extends Actuate_NoHeat_Alarm&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_QNg3YEqREeC-jK3y8pmJhw" org.eventb.core.target="HCtrl_M0"/>
+<org.eventb.core.seesContext name="_QNg3YUqREeC-jK3y8pmJhw" org.eventb.core.target="HC_CONTEXT"/>
+<org.eventb.core.variable name="'" org.eventb.core.identifier="hsc"/>
+<org.eventb.core.variable name="_auO4UNrsEd-pf4uW-3WsZQ" org.eventb.core.identifier="nha"/>
+<org.eventb.core.variable name="_auO4UdrsEd-pf4uW-3WsZQ" org.eventb.core.identifier="ota"/>
+<org.eventb.core.variable name="_auO4UtrsEd-pf4uW-3WsZQ" org.eventb.core.identifier="avt"/>
+<org.eventb.core.variable name="_auO4U9rsEd-pf4uW-3WsZQ" org.eventb.core.identifier="ttm"/>
+<org.eventb.core.variable name="_auO4VNrsEd-pf4uW-3WsZQ" org.eventb.core.identifier="stm1"/>
+<org.eventb.core.variable name="_auO4VdrsEd-pf4uW-3WsZQ" org.eventb.core.identifier="stm2"/>
+<org.eventb.core.variable name="_auO4VtrsEd-pf4uW-3WsZQ" org.eventb.core.identifier="shs"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="sinc_flag"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="sdec_flag"/>
+<org.eventb.core.variable name="_bpZqYN39Ed-w2bJZ62iTqg" org.eventb.core.identifier="cttm"/>
+<org.eventb.core.variable name="_auPfYtrsEd-pf4uW-3WsZQ" org.eventb.core.identifier="cttm1"/>
+<org.eventb.core.variable name="_6jN_YNtZEd--zJxpUlasPA" org.eventb.core.identifier="cttm2"/>
+<org.eventb.core.variable name="_auPfZNrsEd-pf4uW-3WsZQ" org.eventb.core.identifier="ctm"/>
+<org.eventb.core.variable name="_auQGcNrsEd-pf4uW-3WsZQ" org.eventb.core.identifier="hs1"/>
+<org.eventb.core.variable name="_jHPsUN1KEd-w04F_HUlxdg" org.eventb.core.identifier="shss"/>
+<org.eventb.core.invariant name="_bpcGoN39Ed-w2bJZ62iTqg" org.eventb.core.label="invar36" org.eventb.core.predicate="cttm ∈ ℤ"/>
+<org.eventb.core.invariant name="_auQGctrsEd-pf4uW-3WsZQ" org.eventb.core.label="invar25" org.eventb.core.predicate="cttm1 ∈ ℤ"/>
+<org.eventb.core.invariant name="_auQGc9rsEd-pf4uW-3WsZQ" org.eventb.core.label="invar26" org.eventb.core.predicate="cttm2 ∈ ℤ"/>
+<org.eventb.core.invariant name="_6jPNgNtZEd--zJxpUlasPA" org.eventb.core.label="invar30" org.eventb.core.predicate="ctm ∈ ℤ"/>
+<org.eventb.core.invariant name="_dBL7wN1EEd-mlOfaBFF3cw" org.eventb.core.label="invar31" org.eventb.core.predicate="hs1 ∈ BOOL"/>
+<org.eventb.core.invariant name="inv1" org.eventb.core.label="typing_stm1" org.eventb.core.predicate="stm1 ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv2" org.eventb.core.label="typing_avt" org.eventb.core.predicate="avt ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv3" org.eventb.core.label="typing_nha" org.eventb.core.predicate="nha ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv4" org.eventb.core.label="typing_stm2" org.eventb.core.predicate="stm2 ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv5" org.eventb.core.label="typing_hsc" org.eventb.core.predicate="hsc ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv6" org.eventb.core.label="typing_shs" org.eventb.core.predicate="shs ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv7" org.eventb.core.label="typing_ota" org.eventb.core.predicate="ota ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv8" org.eventb.core.label="typing_ttm" org.eventb.core.predicate="ttm ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv9" org.eventb.core.label="typing_sdec_flag" org.eventb.core.predicate="sdec_flag ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv10" org.eventb.core.label="typing_sinc_flag" org.eventb.core.predicate="sinc_flag ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv11" org.eventb.core.label="Heating_Ctrl5_M1_inv15" org.eventb.core.predicate="shs ∈  BOOL"/>
+<org.eventb.core.invariant name="_jHQ6cN1KEd-w04F_HUlxdg" org.eventb.core.label="invar33" org.eventb.core.predicate="shss ∈ BOOL"/>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_bpfxAN39Ed-w2bJZ62iTqg" org.eventb.core.assignment="cttm :∈ ℤ" org.eventb.core.label="act32"/>
+<org.eventb.core.action name="_auQtgtrsEd-pf4uW-3WsZQ" org.eventb.core.assignment="cttm1 :∈ ℤ" org.eventb.core.label="act21"/>
+<org.eventb.core.action name="_auQtg9rsEd-pf4uW-3WsZQ" org.eventb.core.assignment="cttm2 :∈ ℤ" org.eventb.core.label="act22"/>
+<org.eventb.core.action name="_6jP0kNtZEd--zJxpUlasPA" org.eventb.core.assignment="ctm :∈ ℤ" org.eventb.core.label="act26"/>
+<org.eventb.core.action name="_dBNJ4N1EEd-mlOfaBFF3cw" org.eventb.core.assignment="hs1 ≔ FALSE" org.eventb.core.label="act27"/>
+<org.eventb.core.action name="_jHSIkN1KEd-w04F_HUlxdg" org.eventb.core.assignment="shss:∈ BOOL" org.eventb.core.label="act29"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auSisdrsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Get_Target_Temperature1">
+<org.eventb.core.parameter name="_auSistrsEd-pf4uW-3WsZQ" org.eventb.core.identifier="tm"/>
+<org.eventb.core.guard name="_auSis9rsEd-pf4uW-3WsZQ" org.eventb.core.label="grd1" org.eventb.core.predicate="tm ∈ ℤ"/>
+<org.eventb.core.guard name="_auSitNrsEd-pf4uW-3WsZQ" org.eventb.core.label="grd2" org.eventb.core.predicate="tm = cttm"/>
+<org.eventb.core.action name="_auSitdrsEd-pf4uW-3WsZQ" org.eventb.core.assignment="cttm1 ≔ tm" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_QNmW8EqREeC-jK3y8pmJhw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Sense_PressIncrease_Target_Temperature">
+<org.eventb.core.refinesEvent name="_QNmW8UqREeC-jK3y8pmJhw" org.eventb.core.target="Sense_PressIncrease_Target_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Raise_Target_Temperature">
+<org.eventb.core.refinesEvent name="_QNm-AEqREeC-jK3y8pmJhw" org.eventb.core.target="Raise_Target_Temperature"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="cttm1 &lt; Max"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="sinc_flag = TRUE"/>
+<org.eventb.core.witness name="_bpnFwN39Ed-w2bJZ62iTqg" org.eventb.core.label="tm" org.eventb.core.predicate="tm = cttm1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="ttm ≔ cttm1 +1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_bpnFwd39Ed-w2bJZ62iTqg" org.eventb.core.assignment="sinc_flag ≔ FALSE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_RnNhAEmbEeC7k-qEuuQB5Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Raise_Target_Temperature_Blocked">
+<org.eventb.core.refinesEvent name="_QNnlEEqREeC-jK3y8pmJhw" org.eventb.core.target="Raise_Target_Temperature_Blocked"/>
+<org.eventb.core.guard name="_RnNhAkmbEeC7k-qEuuQB5Q" org.eventb.core.label="grd1" org.eventb.core.predicate="sinc_flag = TRUE"/>
+<org.eventb.core.guard name="_RnNhA0mbEeC7k-qEuuQB5Q" org.eventb.core.label="grd2" org.eventb.core.predicate="¬ (cttm1 &lt; Max)"/>
+<org.eventb.core.witness name="_RnNhBEmbEeC7k-qEuuQB5Q" org.eventb.core.label="tm" org.eventb.core.predicate="tm = cttm1"/>
+<org.eventb.core.action name="_RnNhBUmbEeC7k-qEuuQB5Q" org.eventb.core.assignment="sinc_flag ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_kEMBYEmVEeCuZrZ5O22WmA" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Sense_PressDecrease_Target_Temperature">
+<org.eventb.core.refinesEvent name="_QNozMEqREeC-jK3y8pmJhw" org.eventb.core.target="Sense_PressDecrease_Target_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auR7o9rsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Lower_Target_Temperature">
+<org.eventb.core.refinesEvent name="_QNozMUqREeC-jK3y8pmJhw" org.eventb.core.target="Lower_Target_Temperature"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="sdec_flag = TRUE"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="cttm1 &gt; Min"/>
+<org.eventb.core.witness name="_bpo68d39Ed-w2bJZ62iTqg" org.eventb.core.label="tm" org.eventb.core.predicate="tm = cttm1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="ttm ≔ cttm1 −1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_bpo68t39Ed-w2bJZ62iTqg" org.eventb.core.assignment="sdec_flag ≔ FALSE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_RnOvIEmbEeC7k-qEuuQB5Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Lower_Target_Temperature_Blocked">
+<org.eventb.core.refinesEvent name="_QNqBUEqREeC-jK3y8pmJhw" org.eventb.core.target="Lower_Target_Temperature_Blocked"/>
+<org.eventb.core.guard name="_RnOvIkmbEeC7k-qEuuQB5Q" org.eventb.core.label="grd1" org.eventb.core.predicate="sdec_flag = TRUE"/>
+<org.eventb.core.guard name="_RnOvI0mbEeC7k-qEuuQB5Q" org.eventb.core.label="grd2" org.eventb.core.predicate="¬ (cttm1 &gt; Min)"/>
+<org.eventb.core.witness name="_RnOvJEmbEeC7k-qEuuQB5Q" org.eventb.core.label="tm" org.eventb.core.predicate="tm = cttm1"/>
+<org.eventb.core.action name="_RnPWMEmbEeC7k-qEuuQB5Q" org.eventb.core.assignment="sdec_flag ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_E4oXYd30Ed-w2bJZ62iTqg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Set_Target_Temperature">
+<org.eventb.core.parameter name="_E4oXYt30Ed-w2bJZ62iTqg" org.eventb.core.identifier="tm"/>
+<org.eventb.core.guard name="_E4oXY930Ed-w2bJZ62iTqg" org.eventb.core.label="grd1" org.eventb.core.predicate="tm ∈ ℤ"/>
+<org.eventb.core.guard name="_E4oXZN30Ed-w2bJZ62iTqg" org.eventb.core.label="grd2" org.eventb.core.predicate="tm = ttm"/>
+<org.eventb.core.action name="_E4oXZd30Ed-w2bJZ62iTqg" org.eventb.core.assignment="cttm ≔ tm" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auTJwNrsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Display_Target_Temperature">
+<org.eventb.core.refinesEvent name="_QNr2gEqREeC-jK3y8pmJhw" org.eventb.core.target="Display_Target_Temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Sense_Temperatures">
+<org.eventb.core.refinesEvent name="_QNr2gUqREeC-jK3y8pmJhw" org.eventb.core.target="Sense_Temperatures"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_QNr2gkqREeC-jK3y8pmJhw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Calculate_Average_Temperature">
+<org.eventb.core.refinesEvent name="_QNsdkEqREeC-jK3y8pmJhw" org.eventb.core.target="Calculate_Average_Temperature"/>
+<org.eventb.core.witness name="_dBQ0Qd1EEd-mlOfaBFF3cw" org.eventb.core.label="tm1" org.eventb.core.predicate="tm1 = stm1"/>
+<org.eventb.core.witness name="_dBQ0Qt1EEd-mlOfaBFF3cw" org.eventb.core.label="tm2" org.eventb.core.predicate="tm2 = stm2"/>
+<org.eventb.core.action name="_dBQ0Q91EEd-mlOfaBFF3cw" org.eventb.core.assignment="avt ≔ (stm1 + stm2) ÷ 2" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auUX5NrsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Display_Current_Temperature">
+<org.eventb.core.refinesEvent name="_QNtEoEqREeC-jK3y8pmJhw" org.eventb.core.target="Display_Current_Temperature"/>
+<org.eventb.core.parameter name="_u-1QgEqGEeC-jK3y8pmJhw" org.eventb.core.identifier="tm_avt"/>
+<org.eventb.core.guard name="_u-1QgUqGEeC-jK3y8pmJhw" org.eventb.core.label="grd2" org.eventb.core.predicate="tm_avt = avt"/>
+<org.eventb.core.guard name="_u-1QgkqGEeC-jK3y8pmJhw" org.eventb.core.label="grd1" org.eventb.core.predicate="tm_avt ∈ ℤ"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_6jUGAdtZEd--zJxpUlasPA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Get_Target_Temperature2">
+<org.eventb.core.parameter name="_6jUGAttZEd--zJxpUlasPA" org.eventb.core.identifier="tm"/>
+<org.eventb.core.guard name="_6jUGA9tZEd--zJxpUlasPA" org.eventb.core.label="grd1" org.eventb.core.predicate="tm ∈ ℤ"/>
+<org.eventb.core.guard name="_6jUtENtZEd--zJxpUlasPA" org.eventb.core.label="grd2" org.eventb.core.predicate="tm = cttm"/>
+<org.eventb.core.action name="_6jUtEdtZEd--zJxpUlasPA" org.eventb.core.assignment="cttm2 ≔ tm" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auU-89rsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TurnON_Heat_Source">
+<org.eventb.core.refinesEvent name="_QNuSwEqREeC-jK3y8pmJhw" org.eventb.core.target="TurnON_Heat_Source"/>
+<org.eventb.core.guard name="_auU-9drsEd-pf4uW-3WsZQ" org.eventb.core.label="grd1" org.eventb.core.predicate="avt &lt; cttm2"/>
+<org.eventb.core.witness name="_dBTQgd1EEd-mlOfaBFF3cw" org.eventb.core.label="tm1" org.eventb.core.predicate="tm1 = avt"/>
+<org.eventb.core.witness name="_dBTQgt1EEd-mlOfaBFF3cw" org.eventb.core.label="tm2" org.eventb.core.predicate="tm2 = cttm2"/>
+<org.eventb.core.action name="_auVmANrsEd-pf4uW-3WsZQ" org.eventb.core.assignment="hsc ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auVmAdrsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TurnOFF_Heat_Source">
+<org.eventb.core.refinesEvent name="_QNvg4EqREeC-jK3y8pmJhw" org.eventb.core.target="TurnOFF_Heat_Source"/>
+<org.eventb.core.guard name="_auVmA9rsEd-pf4uW-3WsZQ" org.eventb.core.label="grd1" org.eventb.core.predicate="avt ≥ cttm2"/>
+<org.eventb.core.witness name="_dBT3kd1EEd-mlOfaBFF3cw" org.eventb.core.label="tm1" org.eventb.core.predicate="tm1 = avt"/>
+<org.eventb.core.witness name="_dBT3kt1EEd-mlOfaBFF3cw" org.eventb.core.label="tm2" org.eventb.core.predicate="tm2 = cttm2"/>
+<org.eventb.core.action name="_auVmBdrsEd-pf4uW-3WsZQ" org.eventb.core.assignment="hsc ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auXbMtrsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Set_Heat_Source_State">
+<org.eventb.core.parameter name="_auXbM9rsEd-pf4uW-3WsZQ" org.eventb.core.identifier="state"/>
+<org.eventb.core.guard name="_auYCQNrsEd-pf4uW-3WsZQ" org.eventb.core.label="grd1" org.eventb.core.predicate="state ∈ BOOL"/>
+<org.eventb.core.guard name="_auYCQdrsEd-pf4uW-3WsZQ" org.eventb.core.label="grd2" org.eventb.core.predicate="state = hsc"/>
+<org.eventb.core.action name="_auYCQtrsEd-pf4uW-3WsZQ" org.eventb.core.assignment="shss ≔ state" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auWNFNrsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Actuate_Heat_Source">
+<org.eventb.core.refinesEvent name="_QNxWEEqREeC-jK3y8pmJhw" org.eventb.core.target="Actuate_Heat_Source"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auW0IdrsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SwitchOn_OverHeat_Alram">
+<org.eventb.core.refinesEvent name="_QNxWEUqREeC-jK3y8pmJhw" org.eventb.core.target="SwitchOn_OverHeat_Alram"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="avt &gt; Max"/>
+<org.eventb.core.witness name="_u0tjkN1LEd-w04F_HUlxdg" org.eventb.core.label="tm" org.eventb.core.predicate="tm = avt"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="ota ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auW0I9rsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SwitchOff_OverHeat_Alram">
+<org.eventb.core.refinesEvent name="_QNx9IEqREeC-jK3y8pmJhw" org.eventb.core.target="SwitchOff_OverHeat_Alram"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="avt ≤ Max"/>
+<org.eventb.core.witness name="_u0tjkt1LEd-w04F_HUlxdg" org.eventb.core.label="tm" org.eventb.core.predicate="tm = avt"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="ota ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auW0JdrsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Actuate_OverHeat_Alram">
+<org.eventb.core.refinesEvent name="_QNzLQEqREeC-jK3y8pmJhw" org.eventb.core.target="Actuate_OverHeat_Alram"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Sense_Heater_Status">
+<org.eventb.core.refinesEvent name="_QNzLQUqREeC-jK3y8pmJhw" org.eventb.core.target="Sense_Heater_Status"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auVmBtrsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Get_Stored_HeatSource">
+<org.eventb.core.parameter name="_auWNENrsEd-pf4uW-3WsZQ" org.eventb.core.identifier="state"/>
+<org.eventb.core.guard name="_auWNEdrsEd-pf4uW-3WsZQ" org.eventb.core.label="grd1" org.eventb.core.predicate="state ∈ BOOL"/>
+<org.eventb.core.guard name="_auWNEtrsEd-pf4uW-3WsZQ" org.eventb.core.label="grd2" org.eventb.core.predicate="state = shss"/>
+<org.eventb.core.action name="_auWNE9rsEd-pf4uW-3WsZQ" org.eventb.core.assignment="hs1 ≔ state" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auYCQ9rsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SwitchOn_NoHeat_Alarm">
+<org.eventb.core.refinesEvent name="_QN0ZYEqREeC-jK3y8pmJhw" org.eventb.core.target="SwitchOn_NoHeat_Alarm"/>
+<org.eventb.core.guard name="_auYCRdrsEd-pf4uW-3WsZQ" org.eventb.core.label="grd1" org.eventb.core.predicate="hs1 ≠ shs"/>
+<org.eventb.core.witness name="_dBW64N1EEd-mlOfaBFF3cw" org.eventb.core.label="state1" org.eventb.core.predicate="state1 = hs1"/>
+<org.eventb.core.witness name="_dBW64d1EEd-mlOfaBFF3cw" org.eventb.core.label="state2" org.eventb.core.predicate="state2 = shs"/>
+<org.eventb.core.action name="_auYpUdrsEd-pf4uW-3WsZQ" org.eventb.core.assignment="nha ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auYpUtrsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SwitchOff_NoHeat_Alarm">
+<org.eventb.core.refinesEvent name="_QN1AcEqREeC-jK3y8pmJhw" org.eventb.core.target="SwitchOff_NoHeat_Alarm"/>
+<org.eventb.core.guard name="_auYpVNrsEd-pf4uW-3WsZQ" org.eventb.core.label="grd1" org.eventb.core.predicate="hs1 = shs"/>
+<org.eventb.core.witness name="_dBXh8d1EEd-mlOfaBFF3cw" org.eventb.core.label="state1" org.eventb.core.predicate="state1 = hs1"/>
+<org.eventb.core.witness name="_dBXh8N1EEd-mlOfaBFF3cw" org.eventb.core.label="state2" org.eventb.core.predicate="state2 = shs"/>
+<org.eventb.core.action name="_auZQYNrsEd-pf4uW-3WsZQ" org.eventb.core.assignment="nha ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_auZQYdrsEd-pf4uW-3WsZQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Actuate_NoHeat_Alarm">
+<org.eventb.core.refinesEvent name="_QN1ngEqREeC-jK3y8pmJhw" org.eventb.core.target="Actuate_NoHeat_Alarm"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

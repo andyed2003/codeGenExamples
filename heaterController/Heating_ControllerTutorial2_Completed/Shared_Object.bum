@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile ch.ethz.eventb.decomposition.decomposed="true" org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" org.eventb.core.generated="true" version="5">
+<org.eventb.core.seesContext name="3" org.eventb.core.target="HC_CONTEXT"/>
+<org.eventb.core.variable name="'" org.eventb.core.identifier="ctm"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="shss"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="cttm"/>
+<org.eventb.core.invariant name="*" org.eventb.core.label="typing_cttm" org.eventb.core.predicate="cttm ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="+" org.eventb.core.label="typing_ctm" org.eventb.core.predicate="ctm ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="typing_shss" org.eventb.core.predicate="shss ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="cttm :∈ ℤ" org.eventb.core.label="act32"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="ctm :∈ ℤ" org.eventb.core.label="act26"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="shss:∈ BOOL" org.eventb.core.label="act29"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Get_Target_Temperature1">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="tm"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="tm ∈ ℤ"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="tm = cttm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Set_Target_Temperature">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="tm"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="tm ∈ ℤ"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="cttm ≔ tm" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Get_Target_Temperature2">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="tm"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="tm ∈ ℤ"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="tm = cttm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Set_Heat_Source_State">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="state"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="state ∈ BOOL"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="shss ≔ state" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Get_Stored_HeatSource">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="state"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="state ∈ BOOL"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="state = shss"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="ASCII"?>
+<il1:Program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:il1="http://il1/1.0" projectName="Heating_ControllerTutorial2_Completed">
+  <decls xsi:type="il1:ConstantDecl" identifier="Max" type="&#x2124;" initialValue="45" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="HC_CONTEXT"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="Min" type="&#x2124;" initialValue="5" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="HC_CONTEXT"/>
+  <protected name="Shared_Object_IMPL" projectName="Heating_ControllerTutorial2_Completed" machineName="Shared_Object_IMPL">
+    <subroutines name="Get_Target_Temperature1" machineName="Shared_Object_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" action="tm &#x2254; cttm"/>
+      <formalParameters xsi:type="il1:OutParameter" identifier="tm" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <subroutines name="Set_Target_Temperature" machineName="Shared_Object_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" ParentEventName="Set_Target_Temperature" action="cttm &#x2254; tm"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="tm" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <subroutines name="Get_Target_Temperature2" machineName="Shared_Object_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" action="tm &#x2254; cttm"/>
+      <formalParameters xsi:type="il1:OutParameter" identifier="tm" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <subroutines name="Set_Heat_Source_State" machineName="Shared_Object_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" ParentEventName="Set_Heat_Source_State" action="shss &#x2254; state"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="state" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <subroutines name="Get_Stored_HeatSource" machineName="Shared_Object_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" action="state &#x2254; shss"/>
+      <formalParameters xsi:type="il1:OutParameter" identifier="state" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <decls xsi:type="il1:VariableDecl" identifier="ctm" type="&#x2124;" initialValue="20" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Shared_Object_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="shss" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Shared_Object_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="cttm" type="&#x2124;" initialValue="20" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Shared_Object_IMPL"/>
+  </protected>
+  <entryPoint>
+    <autoTasks name="Temp_Ctrl_Task_IMPL" projectName="Heating_ControllerTutorial2_Completed" machineName="Temp_Ctrl_Task_IMPL">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Seq">
+          <rightBranch xsi:type="il1:Call">
+            <subroutine name="Sense_Temperatures" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+              <body xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Action" action="t1 &#x2254; ts1"/>
+                <rightBranch xsi:type="il1:Action" action="t2 &#x2254; ts2"/>
+              </body>
+              <formalParameters xsi:type="il1:OutParameter" identifier="t1" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+              <formalParameters xsi:type="il1:OutParameter" identifier="t2" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed" orderNumber="1"/>
+            </subroutine>
+            <actualParameters xsi:type="il1:InParameter" identifier="stm1" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+            <actualParameters xsi:type="il1:InParameter" identifier="stm2" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL" orderNumber="1"/>
+          </rightBranch>
+        </leftBranch>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Action" ParentEventName="Calculate_Average_Temperature" action="avt  &#x2254; (stm1 + stm2) &#xf7; 2"/>
+          </leftBranch>
+          <rightBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Seq">
+              <rightBranch xsi:type="il1:Call">
+                <subroutine name="Display_Current_Temperature" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+                  <body xsi:type="il1:Action" ParentEventName="Display_Current_Temperature" action="ctd &#x2254; tm_avt"/>
+                  <formalParameters xsi:type="il1:InParameter" identifier="tm_avt" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+                </subroutine>
+                <actualParameters xsi:type="il1:OutParameter" identifier="avt" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+              </rightBranch>
+            </leftBranch>
+            <rightBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Seq">
+                <rightBranch xsi:type="il1:Call">
+                  <subroutine name="Get_Target_Temperature2" machineName="Shared_Object_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+                    <body xsi:type="il1:Action" action="tm &#x2254; cttm"/>
+                    <formalParameters xsi:type="il1:OutParameter" identifier="tm" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+                  </subroutine>
+                  <actualParameters xsi:type="il1:InParameter" identifier="cttm2" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+                </rightBranch>
+              </leftBranch>
+              <rightBranch xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:If">
+                  <body xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Action" ParentEventName="TurnON_Heat_Source" action="hsc  &#x2254; TRUE"/>
+                  </body>
+                  <condition>avt &lt; cttm2</condition>
+                  <else xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Action" ParentEventName="TurnOFF_Heat_Source" action="hsc  &#x2254; FALSE"/>
+                  </else>
+                  <relatedEvent href="platform:/resource/Heating_ControllerTutorial2_Completed/Temp_Ctrl_Task_IMPL.bum#org.eventb.emf.core.machine.Event.TurnON_Heat_Source"/>
+                </leftBranch>
+                <rightBranch xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Seq">
+                    <rightBranch xsi:type="il1:Call">
+                      <subroutine name="Set_Heat_Source_State" machineName="Shared_Object_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+                        <body xsi:type="il1:Action" ParentEventName="Set_Heat_Source_State" action="shss &#x2254; state"/>
+                        <formalParameters xsi:type="il1:InParameter" identifier="state" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+                      </subroutine>
+                      <actualParameters xsi:type="il1:OutParameter" identifier="hsc" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+                    </rightBranch>
+                  </leftBranch>
+                  <rightBranch xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Seq">
+                      <rightBranch xsi:type="il1:Call">
+                        <subroutine name="Actuate_Heat_Source" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+                          <body xsi:type="il1:Action" ParentEventName="Actuate_Heat_Source" action="hsa &#x2254; state_hsc"/>
+                          <formalParameters xsi:type="il1:InParameter" identifier="state_hsc" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+                        </subroutine>
+                        <actualParameters xsi:type="il1:OutParameter" identifier="hsc" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+                      </rightBranch>
+                    </leftBranch>
+                    <rightBranch xsi:type="il1:Seq">
+                      <leftBranch xsi:type="il1:If">
+                        <body xsi:type="il1:Seq">
+                          <leftBranch xsi:type="il1:Action" ParentEventName="SwitchOn_OverHeat_Alram" action="ota  &#x2254; TRUE"/>
+                        </body>
+                        <condition>avt > Max</condition>
+                        <else xsi:type="il1:Seq">
+                          <leftBranch xsi:type="il1:Action" ParentEventName="SwitchOff_OverHeat_Alram" action="ota  &#x2254; FALSE"/>
+                        </else>
+                        <relatedEvent href="platform:/resource/Heating_ControllerTutorial2_Completed/Temp_Ctrl_Task_IMPL.bum#org.eventb.emf.core.machine.Event.SwitchOn_OverHeat_Alram"/>
+                      </leftBranch>
+                      <rightBranch xsi:type="il1:Seq">
+                        <leftBranch xsi:type="il1:Seq">
+                          <rightBranch xsi:type="il1:Call">
+                            <subroutine name="Actuate_OverHeat_Alram" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+                              <body xsi:type="il1:Action" ParentEventName="Actuate_OverHeat_Alram" action="aota &#x2254; state_ota"/>
+                              <formalParameters xsi:type="il1:InParameter" identifier="state_ota" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+                            </subroutine>
+                            <actualParameters xsi:type="il1:OutParameter" identifier="ota" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+                          </rightBranch>
+                        </leftBranch>
+                        <rightBranch xsi:type="il1:Seq">
+                          <leftBranch xsi:type="il1:Output" text="heat on = " element="hsc"/>
+                          <rightBranch xsi:type="il1:Seq">
+                            <leftBranch xsi:type="il1:Output" text="ota on = " element="ota"/>
+                            <rightBranch xsi:type="il1:Output" text="avt temp :" element="avt"/>
+                          </rightBranch>
+                        </rightBranch>
+                      </rightBranch>
+                    </rightBranch>
+                  </rightBranch>
+                </rightBranch>
+              </rightBranch>
+            </rightBranch>
+          </rightBranch>
+        </rightBranch>
+      </body>
+      <taskType xsi:type="il1:PeriodicTaskType" period="250"/>
+      <decls xsi:type="il1:VariableDecl" identifier="avt" type="&#x2124;" initialValue="0" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="cttm2" type="&#x2124;" initialValue="0" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="hsc" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="ota" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="stm1" type="&#x2124;" initialValue="0" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="stm2" type="&#x2124;" initialValue="0" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Temp_Ctrl_Task_IMPL"/>
+    </autoTasks>
+    <autoTasks name="Heater_Monitor_Task_IMPL" projectName="Heating_ControllerTutorial2_Completed" machineName="Heater_Monitor_Task_IMPL">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Seq">
+          <rightBranch xsi:type="il1:Call">
+            <subroutine name="Sense_Heater_Status" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+              <body xsi:type="il1:Action" action="state_hss &#x2254; hss"/>
+              <formalParameters xsi:type="il1:OutParameter" identifier="state_hss" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+            </subroutine>
+            <actualParameters xsi:type="il1:InParameter" identifier="shs" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Heater_Monitor_Task_IMPL"/>
+          </rightBranch>
+        </leftBranch>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Seq">
+            <rightBranch xsi:type="il1:Call">
+              <subroutine name="Get_Stored_HeatSource" machineName="Shared_Object_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+                <body xsi:type="il1:Action" action="state &#x2254; shss"/>
+                <formalParameters xsi:type="il1:OutParameter" identifier="state" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+              </subroutine>
+              <actualParameters xsi:type="il1:InParameter" identifier="hs1" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Heater_Monitor_Task_IMPL"/>
+            </rightBranch>
+          </leftBranch>
+          <rightBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:If">
+              <body xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Action" ParentEventName="SwitchOn_NoHeat_Alarm" action="nha  &#x2254; TRUE"/>
+              </body>
+              <condition>hs1 &#x2260; shs</condition>
+              <else xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Action" ParentEventName="SwitchOff_NoHeat_Alarm" action="nha  &#x2254; FALSE"/>
+              </else>
+              <relatedEvent href="platform:/resource/Heating_ControllerTutorial2_Completed/Heater_Monitor_Task_IMPL.bum#org.eventb.emf.core.machine.Event.SwitchOn_NoHeat_Alarm"/>
+            </leftBranch>
+            <rightBranch xsi:type="il1:Seq">
+              <rightBranch xsi:type="il1:Call">
+                <subroutine name="Actuate_NoHeat_Alarm" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+                  <body xsi:type="il1:Action" ParentEventName="Actuate_NoHeat_Alarm" action="anha &#x2254; state_nha"/>
+                  <formalParameters xsi:type="il1:InParameter" identifier="state_nha" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+                </subroutine>
+                <actualParameters xsi:type="il1:OutParameter" identifier="nha" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Heater_Monitor_Task_IMPL"/>
+              </rightBranch>
+            </rightBranch>
+          </rightBranch>
+        </rightBranch>
+      </body>
+      <taskType xsi:type="il1:PeriodicTaskType" period="250"/>
+      <decls xsi:type="il1:VariableDecl" identifier="hs1" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Heater_Monitor_Task_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="nha" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Heater_Monitor_Task_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="shs" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Heater_Monitor_Task_IMPL"/>
+    </autoTasks>
+    <autoTasks name="Display_Update_Task_IMPL" projectName="Heating_ControllerTutorial2_Completed" machineName="Display_Update_Task_IMPL">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Seq">
+          <rightBranch xsi:type="il1:Call">
+            <subroutine name="Get_Target_Temperature1" machineName="Shared_Object_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+              <body xsi:type="il1:Action" action="tm &#x2254; cttm"/>
+              <formalParameters xsi:type="il1:OutParameter" identifier="tm" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+            </subroutine>
+            <actualParameters xsi:type="il1:InParameter" identifier="cttm1" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Display_Update_Task_IMPL"/>
+          </rightBranch>
+        </leftBranch>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Seq">
+            <rightBranch xsi:type="il1:Call">
+              <subroutine name="Sense_PressIncrease_Target_Temperature" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+                <body xsi:type="il1:Action" action="state_inc &#x2254; inc_flag"/>
+                <formalParameters xsi:type="il1:OutParameter" identifier="state_inc" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+              </subroutine>
+              <actualParameters xsi:type="il1:InParameter" identifier="sinc_flag" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Display_Update_Task_IMPL"/>
+            </rightBranch>
+          </leftBranch>
+          <rightBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:If">
+              <body xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Action" ParentEventName="Raise_Target_Temperature" action="ttm  &#x2254; cttm1 +1"/>
+                  <rightBranch xsi:type="il1:Action" ParentEventName="Raise_Target_Temperature" action="sinc_flag  &#x2254; FALSE"/>
+                </leftBranch>
+              </body>
+              <condition>cttm1 &lt; Max</condition>
+              <condition>sinc_flag = TRUE</condition>
+              <else xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Action" ParentEventName="Raise_Target_Temperature_Blocked" action="sinc_flag  &#x2254; FALSE"/>
+              </else>
+              <relatedEvent href="platform:/resource/Heating_ControllerTutorial2_Completed/Display_Update_Task_IMPL.bum#org.eventb.emf.core.machine.Event.Raise_Target_Temperature"/>
+            </leftBranch>
+            <rightBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Seq">
+                <rightBranch xsi:type="il1:Call">
+                  <subroutine name="Sense_PressDecrease_Target_Temperature" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+                    <body xsi:type="il1:Action" action="state_dec &#x2254; dec_flag"/>
+                    <formalParameters xsi:type="il1:OutParameter" identifier="state_dec" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+                  </subroutine>
+                  <actualParameters xsi:type="il1:InParameter" identifier="sdec_flag" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Display_Update_Task_IMPL"/>
+                </rightBranch>
+              </leftBranch>
+              <rightBranch xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:If">
+                  <body xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Seq">
+                      <leftBranch xsi:type="il1:Action" ParentEventName="Lower_Target_Temperature" action="ttm  &#x2254; cttm1 &#x2212;1"/>
+                      <rightBranch xsi:type="il1:Action" ParentEventName="Lower_Target_Temperature" action="sdec_flag  &#x2254; FALSE"/>
+                    </leftBranch>
+                  </body>
+                  <condition>sdec_flag = TRUE</condition>
+                  <condition>cttm1 > Min</condition>
+                  <else xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Action" ParentEventName="Lower_Target_Temperature_Blocked" action="sdec_flag  &#x2254; FALSE"/>
+                  </else>
+                  <relatedEvent href="platform:/resource/Heating_ControllerTutorial2_Completed/Display_Update_Task_IMPL.bum#org.eventb.emf.core.machine.Event.Lower_Target_Temperature"/>
+                </leftBranch>
+                <rightBranch xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Seq">
+                    <rightBranch xsi:type="il1:Call">
+                      <subroutine name="Set_Target_Temperature" machineName="Shared_Object_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+                        <body xsi:type="il1:Action" ParentEventName="Set_Target_Temperature" action="cttm &#x2254; tm"/>
+                        <formalParameters xsi:type="il1:InParameter" identifier="tm" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+                      </subroutine>
+                      <actualParameters xsi:type="il1:OutParameter" identifier="ttm" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Display_Update_Task_IMPL"/>
+                    </rightBranch>
+                  </leftBranch>
+                  <rightBranch xsi:type="il1:Seq">
+                    <rightBranch xsi:type="il1:Call">
+                      <subroutine name="Display_Target_Temperature" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+                        <body xsi:type="il1:Action" ParentEventName="Display_Target_Temperature" action="ttd &#x2254;tm_tt"/>
+                        <formalParameters xsi:type="il1:InParameter" identifier="tm_tt" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+                      </subroutine>
+                      <actualParameters xsi:type="il1:OutParameter" identifier="ttm" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Display_Update_Task_IMPL"/>
+                    </rightBranch>
+                  </rightBranch>
+                </rightBranch>
+              </rightBranch>
+            </rightBranch>
+          </rightBranch>
+        </rightBranch>
+      </body>
+      <taskType xsi:type="il1:PeriodicTaskType" period="500"/>
+      <decls xsi:type="il1:VariableDecl" identifier="cttm1" type="&#x2124;" initialValue="0" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Display_Update_Task_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="ttm" type="&#x2124;" initialValue="20" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Display_Update_Task_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="sinc_flag" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Display_Update_Task_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="sdec_flag" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Display_Update_Task_IMPL"/>
+    </autoTasks>
+  </entryPoint>
+  <environMachines name="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed" machineName="Envir1_IMPL">
+    <body xsi:type="il1:Seq">
+      <leftBranch xsi:type="il1:If">
+        <body xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Action" ParentEventName="PressIncrease_Target_Temperature" action="inc_flag  &#x2254; TRUE"/>
+        </body>
+        <condition>inc_flag = FALSE</condition>
+        <else xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Action" ParentEventName="Reset_Increase_Flag" action="inc_flag  &#x2254; FALSE"/>
+        </else>
+        <relatedEvent href="platform:/resource/Heating_ControllerTutorial2_Completed/Envir1_IMPL.bum#org.eventb.emf.core.machine.Event.PressIncrease_Target_Temperature"/>
+      </leftBranch>
+      <rightBranch xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:If">
+          <body xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Action" ParentEventName="PressDecrease_Target_Temperature" action="dec_flag  &#x2254; TRUE"/>
+          </body>
+          <condition>dec_flag = FALSE</condition>
+          <else xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Action" ParentEventName="Reset_decrease_Flag" action="dec_flag  &#x2254; FALSE"/>
+          </else>
+          <relatedEvent href="platform:/resource/Heating_ControllerTutorial2_Completed/Envir1_IMPL.bum#org.eventb.emf.core.machine.Event.PressDecrease_Target_Temperature"/>
+        </leftBranch>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Action" ParentEventName="Alter_Heater_Status" action="hss  &#x2254; FALSE"/>
+          </leftBranch>
+          <rightBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Action" ParentEventName="Alter_Temperature_Sensor1" action="ts1  &#x2254; ts1 + 1"/>
+            </leftBranch>
+            <rightBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Output" text="current temperature:" element="ctd"/>
+              <rightBranch xsi:type="il1:Output" text="overTemperature = " element="aota"/>
+            </rightBranch>
+          </rightBranch>
+        </rightBranch>
+      </rightBranch>
+    </body>
+    <taskType xsi:type="il1:PeriodicTaskType" period="100"/>
+    <decls xsi:type="il1:VariableDecl" identifier="inc_flag" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Envir1_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="dec_flag" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Envir1_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="ts1" type="&#x2124;" initialValue="0" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Envir1_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="ts2" type="&#x2124;" initialValue="0" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Envir1_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="hss" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Envir1_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="anha" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Envir1_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="ttd" type="&#x2124;" initialValue="20" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Envir1_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="hsa" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Envir1_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="ctd" type="&#x2124;" initialValue="0" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Envir1_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="aota" type="BOOL" initialValue="FALSE" ProjectName="Heating_ControllerTutorial2_Completed" ComponentName="Envir1_IMPL"/>
+    <subroutines name="Sense_PressIncrease_Target_Temperature" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" action="state_inc &#x2254; inc_flag"/>
+      <formalParameters xsi:type="il1:OutParameter" identifier="state_inc" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <subroutines name="Sense_PressDecrease_Target_Temperature" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" action="state_dec &#x2254; dec_flag"/>
+      <formalParameters xsi:type="il1:OutParameter" identifier="state_dec" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <subroutines name="Display_Target_Temperature" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" ParentEventName="Display_Target_Temperature" action="ttd &#x2254;tm_tt"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="tm_tt" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <subroutines name="Sense_Temperatures" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Action" action="t1 &#x2254; ts1"/>
+        <rightBranch xsi:type="il1:Action" action="t2 &#x2254; ts2"/>
+      </body>
+      <formalParameters xsi:type="il1:OutParameter" identifier="t1" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+      <formalParameters xsi:type="il1:OutParameter" identifier="t2" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed" orderNumber="1"/>
+    </subroutines>
+    <subroutines name="Display_Current_Temperature" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" ParentEventName="Display_Current_Temperature" action="ctd &#x2254; tm_avt"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="tm_avt" type=" &#x2124;" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <subroutines name="Actuate_Heat_Source" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" ParentEventName="Actuate_Heat_Source" action="hsa &#x2254; state_hsc"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="state_hsc" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <subroutines name="Actuate_OverHeat_Alram" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" ParentEventName="Actuate_OverHeat_Alram" action="aota &#x2254; state_ota"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="state_ota" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <subroutines name="Sense_Heater_Status" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" action="state_hss &#x2254; hss"/>
+      <formalParameters xsi:type="il1:OutParameter" identifier="state_hss" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+    <subroutines name="Actuate_NoHeat_Alarm" machineName="Envir1_IMPL" projectName="Heating_ControllerTutorial2_Completed">
+      <body xsi:type="il1:Action" ParentEventName="Actuate_NoHeat_Alarm" action="anha &#x2254; state_nha"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="state_nha" type=" BOOL" ProjectName="Heating_ControllerTutorial2_Completed"/>
+    </subroutines>
+  </environMachines>
+</il1:Program>

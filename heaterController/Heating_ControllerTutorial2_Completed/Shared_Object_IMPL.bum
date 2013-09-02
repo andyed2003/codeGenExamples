@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment=" " org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="_Fx1gkFPbEeG7rucOvDwH4g" org.eventb.core.target="Shared_Object"/>
+<org.eventb.core.seesContext name="_Fx1gkVPbEeG7rucOvDwH4g" org.eventb.core.target="HC_CONTEXT"/>
+<org.eventb.tasking.persistence.MachineType name="_dnX8IAUoEeGXUuy7d_JmxA" org.eventb.tasking.persistence.machineTypeAttribute="Shared"/>
+<org.eventb.core.variable name="'" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="ctm"/>
+<org.eventb.core.variable name="(" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="shss"/>
+<org.eventb.core.variable name=")" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="cttm"/>
+<org.eventb.core.invariant name="inv1" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_cttm" org.eventb.core.predicate="cttm ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv2" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_ctm" org.eventb.core.predicate="ctm ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv3" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_shss" org.eventb.core.predicate="shss ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="cttm ≔ 20" org.eventb.core.label="act32"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="ctm ≔ 20" org.eventb.core.label="act26"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="shss ≔ FALSE" org.eventb.core.label="act29"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Get_Target_Temperature1">
+<org.eventb.core.refinesEvent name="_Fx6ZEFPbEeG7rucOvDwH4g" org.eventb.core.target="Get_Target_Temperature1"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="tm"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="tm ∈ ℤ"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="tm = cttm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Set_Target_Temperature">
+<org.eventb.core.refinesEvent name="_Fx7nMFPbEeG7rucOvDwH4g" org.eventb.core.target="Set_Target_Temperature"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="tm"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="tm ∈ ℤ"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="cttm ≔ tm" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Get_Target_Temperature2">
+<org.eventb.core.refinesEvent name="_Fx8OQFPbEeG7rucOvDwH4g" org.eventb.core.target="Get_Target_Temperature2"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="tm"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="tm ∈ ℤ"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="tm = cttm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Set_Heat_Source_State">
+<org.eventb.core.refinesEvent name="_Fx9cYFPbEeG7rucOvDwH4g" org.eventb.core.target="Set_Heat_Source_State"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="state"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="state ∈ BOOL"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="shss ≔ state" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Get_Stored_HeatSource">
+<org.eventb.core.refinesEvent name="_Fx-qgFPbEeG7rucOvDwH4g" org.eventb.core.target="Get_Stored_HeatSource"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="state"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="state ∈ BOOL"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="state = shss"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
